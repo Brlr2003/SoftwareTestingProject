@@ -1,0 +1,8 @@
+Bill Number: 0
+Date: 2023-02-18
+Books: 
+  ISBN: 111111111
+  Title: Rich Dad Poor Dad
+  Quantity: 20
+  Price: $100.0
+Total Amount: $2000.0

@@ -1,0 +1,8 @@
+Bill Number: 2
+Date: 2023-02-01
+Books: 
+  ISBN: iuiu
+  Title: uiouoi
+  Quantity: 50
+  Price: $200.0
+Total Amount: $10800.0
