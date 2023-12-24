@@ -77,8 +77,11 @@ public class Bill implements Serializable, Bill_Interface{
             // show error message: book not found in bill
             return;
         }
+        int index = this.books.indexOf(book);
+        int quantity = this.quantities.get(index);
+        this.totalAmount -= book.getSellingPrice() * quantity;
         this.books.remove(book);
-        this.totalAmount -= book.getSellingPrice();
+        this.quantities.remove(index);
     }
 
     private String generateBillNumber() {
