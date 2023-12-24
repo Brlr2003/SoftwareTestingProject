@@ -83,7 +83,7 @@ public class LoginPage extends Application {
         loginPageStage.show();
     }
 
-    private void checkCredentials(Button btn) {
+    void checkCredentials(Button btn) {
         readFromUsers();
         ArrayList<User> user = users.getUsers();
         boolean check = false;
