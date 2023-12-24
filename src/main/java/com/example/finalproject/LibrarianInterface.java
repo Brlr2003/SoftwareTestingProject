@@ -90,7 +90,6 @@ public class LibrarianInterface extends Application {
                 Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
                 alert.setTitle("Please confirm.");
                 alert.setHeaderText("Are you sure you want to check out?");
-                //alert.setContentText("You total amount is: " + totalAmount);
 
                 Optional<ButtonType> result = alert.showAndWait();
 
@@ -156,7 +155,6 @@ public class LibrarianInterface extends Application {
         }
     }
 
-    //read the input from the file
     public static void read(){
         try{
             File file = new File("src/main/resources/history.dat");
@@ -200,7 +198,6 @@ public class LibrarianInterface extends Application {
         ObservableList<Book> data = FXCollections.observableArrayList();
         ObservableList<Book> books = getBooks();
         data.addAll(books);
-        // Set the data for the table view
         setTableData(data, tableView);
     }
     private void setCellValueFactory(TableColumn<Book, String> column, String property) {
