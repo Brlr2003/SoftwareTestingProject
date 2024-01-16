@@ -57,29 +57,7 @@ public class BookController {
         }
 
     }
-//    public ArrayList<BookModel> getStockBooks(){
-//        System.out.println("lol22");
-//        ArrayList<BookModel> stockBooks = new ArrayList<>();
-//        System.out.println("pm");
-//        try (ObjectInputStream objis = new ObjectInputStream(new FileInputStream(STOCK_FILE_PATH))) {
-//            System.out.println("read pra");
-//            Object obj = objis.readObject();
-//            if (obj instanceof ArrayList) {
-//                System.out.println("readddddddd");
-//                stockBooks = (ArrayList<BookModel>) obj;
-//            }
-//        } catch (IOException | ClassNotFoundException e) {
-//            e.printStackTrace();
-//        }
-//        System.out.println("TekStockmeth" + stockBooks);
-//        System.out.println("SDUHET ME U PRINTUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU");
-//
-//        return stockBooks;
-//
-//
-//    }
 
-    //it saves the books to a file when the user adds a book
     public void addBookToStock(BookModel book) {
         ArrayList<BookModel> stockBooks = getStockBooks();
         stockBooks.add(book);
@@ -101,16 +79,6 @@ public class BookController {
         }
         return false;
     }
-
-//    public void saveBooksToFile(ArrayList<BookModel> books) {
-//        try (ObjectOutputStream objout = new ObjectOutputStream(new FileOutputStream(STOCK_FILE_PATH))) {
-//            objout.writeObject(books);
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//            // Handle the exception accordingly
-//        }
-//    }
-
     public ArrayList<String> getISBNName(){
 
         ArrayList<BookModel> array = getStockBooks();
@@ -125,26 +93,6 @@ public class BookController {
     }
 
 
-
-//    public void removeStock(int quantity) {
-//        if (bookmodel.getStock() >= quantity) {
-//            bookmodel.setStock(bookmodel.getStock() - quantity);
-//        } else {
-//            System.out.println("Insufficient stock!");
-//        }
-//    }
-
-
-
-//    public BookModel findBookInStock(ArrayList<BookModel> stockBooks, String ISBN) {
-//        for (BookModel stockBook : stockBooks) {
-//            if (ISBN.equals(stockBook.getISBN())) {
-//                return stockBook;
-//            }
-//        }
-//        return null;
-//    }
-
     public boolean equals(Object obj) {
         if (this == obj) {
             return true;
@@ -156,8 +104,6 @@ public class BookController {
         return true;
     }
 
-
-    //////////////Keto 5 te fundit mire do ishte te futen ne nje controller tjt
 
     public <T> ArrayList<T> removeDuplicates(ArrayList<T> list)
     {
