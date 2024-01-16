@@ -1,8 +1,0 @@
-Bill Number: 3
-Date: 2023-02-01
-Books: 
-  ISBN: 2312321
-  Title: 312312
-  Quantity: 5000
-  Price: $312312.0
-Total Amount: $1.5615708E9
