@@ -22,7 +22,7 @@ class TestBookSold {
 		Author author = new Author("Author1","Author1");
 		String supplier = "Supplier1";
 		Book book = new Book(isbn, title, purchasedPrice, sellingPrice, author, stock,
-			category, supplier);
+				category, supplier);
 		BookSold book_sold = new BookSold(book,5);
 		assertEquals(book_sold.getTotalPrice(),3350);
 	}
@@ -38,7 +38,7 @@ class TestBookSold {
 		Author author = new Author("Author1","Author1");
 		String supplier = "Supplier1";
 		Book book = new Book(isbn, title, purchasedPrice, sellingPrice, author, stock,
-			category, supplier);
+				category, supplier);
 		BookSold book_sold = new BookSold(book,3);
 		assertNotEquals(book_sold.getTotalPrice(),1500);
 	}
