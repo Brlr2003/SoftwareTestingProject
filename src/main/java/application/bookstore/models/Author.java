@@ -112,8 +112,7 @@ public class Author extends BaseModel implements Serializable {
     public static<Author extends BaseModel> void overwriteCurrentListToFile(File DATA_FILE, ArrayList<Author> authorList) throws IOException {
         FileOutputStream fileOutputStream = new FileOutputStream(DATA_FILE, false);
         ObjectOutputStream outputStream = new ObjectOutputStream(fileOutputStream);
-        if (authorList.size() == 0) {
-        } else {
+        if (!authorList.isEmpty()) {
             for (Author author : authorList)
                 outputStream.writeObject(author);
         }

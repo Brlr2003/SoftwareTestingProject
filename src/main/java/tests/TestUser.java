@@ -119,19 +119,19 @@ class TestUser {
   @Test
   public void test_isUsernameAndNotPassValid() {
 	  User user = new User("user12"," ",Role.ADMIN);
-	  assertFalse(user.isValid());
+	  Assertions.assertFalse(user.isValid());
   }
   
   @Test
   public void test_isNotUsernameAndPassValid() {
 	  User user = new User(" ","oopjava123",Role.LIBRARIAN);
-	  assertFalse(user.isValid());
+	  Assertions.assertFalse(user.isValid());
   }
   
   @Test
   public void test_isNotUsernameAndNotPassValid() {
 	  User user = new User(" "," ",Role.ADMIN);
-	  assertFalse(user.isValid());
+	  Assertions.assertFalse(user.isValid());
   }
   
   

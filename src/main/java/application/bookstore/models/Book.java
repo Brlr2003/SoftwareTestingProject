@@ -188,8 +188,7 @@ public class Book extends BaseModel  implements Serializable{
     public static<Book extends BaseModel> void overwriteCurrentListToFile(File DATA_FILE, ArrayList<Book> bookList) throws IOException {
         FileOutputStream fileOutputStream = new FileOutputStream(DATA_FILE, false);
         ObjectOutputStream outputStream = new ObjectOutputStream(fileOutputStream);
-        if (bookList.size() == 0) {
-        } else {
+        if (!bookList.isEmpty()) {
             for (Book book : bookList)
                 outputStream.writeObject(book);
         }
