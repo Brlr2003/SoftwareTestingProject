@@ -7,10 +7,8 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="kthimi" />
+        <module name="FinalProject" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="FinalProject" target="14" />
-    </bytecodeTargetLevel>
   </component>
 </project>

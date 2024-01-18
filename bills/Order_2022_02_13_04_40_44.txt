@@ -1,0 +1,8 @@
+Order: Order_2022_02_13_04_40_44
+Date: 2022/02/13 04:40:44
+Client: Omar Alsafarti
+Books Ordered: 
+2ISBN: 978-72-64055-02-5
+ Price120.0
+***************
+Total: 240.0
