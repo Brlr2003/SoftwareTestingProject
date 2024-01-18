@@ -26,7 +26,7 @@ public class BookIntegrationTest {
 
     @AfterEach
     public void tearDown() {
-        // Clean up the test file after each test
+        // Clean up the test file after Each test
         if (testFile.exists()) {
             assertTrue(testFile.delete());
         }
@@ -34,14 +34,14 @@ public class BookIntegrationTest {
 
     @Test
     public void testBookSaveAndRetrieve() {
-        // Create a Book and save it to the test file
+        // Create a Book and save it to the File
         Author author = new Author("Jane", "Doe");
         Book book = new Book("1234567890", "Test Book", 100.0f, 150.0f, author, 10, Category.Fantasy, "Supplier");
 
         // Save the book and check if save was successful
         assertTrue(book.saveInFile(), "Failed to save the book");
 
-        // Retrieve the books from the test file
+        // retrieve the books from the test file
         ArrayList<Book> books = Book.getBooks();
 
         // Assert that the retrieved books list is not null

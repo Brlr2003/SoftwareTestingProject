@@ -14,7 +14,7 @@ public class OrderIntegrationTest {
 
     @BeforeEach
     public void setUp() {
-        //Clean up the test file before each test
+        //Clean up test file before each test
         if (testFile.exists()) {
             assertTrue(testFile.delete());
         }
@@ -22,7 +22,7 @@ public class OrderIntegrationTest {
 
     @AfterEach
     public void tearDown() {
-        // Clean up the test file after each test
+
         if (testFile.exists()) {
             assertTrue(testFile.delete());
         }

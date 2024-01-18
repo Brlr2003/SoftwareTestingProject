@@ -32,7 +32,7 @@ public class UserIntegrationTest {
     public void testUserIntegration() {
 
 
-        // Create a User instance
+        //create a user instance
         User user = new User("user12"," ", Role.ADMIN);
 
         assertNotNull(user);
