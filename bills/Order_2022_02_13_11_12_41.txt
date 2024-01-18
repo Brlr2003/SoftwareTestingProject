@@ -1,0 +1,8 @@
+Order: Order_2022_02_13_11_12_41
+Date: 2022/02/13 11:12:41
+Client: Anne Charlie
+Books Ordered: 
+2ISBN: 974-72-64055-02-5
+ Price1350.0
+***************
+Total: 2700.0

@@ -1,0 +1,8 @@
+Order: Order_2022_02_13_11_11_02
+Date: 2022/02/13 11:11:02
+Client: George Smith
+Books Ordered: 
+4ISBN: 974-12-14055-02-5
+ Price860.0
+***************
+Total: 3440.0
