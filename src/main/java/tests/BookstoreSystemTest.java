@@ -33,16 +33,16 @@ public class BookstoreSystemTest {
         // Redirect System.out for capturing console output
         // System.setOut(new PrintStream(outContent));
 
-        // Simulate user interactions or commands
+        // Simulate User interactions or commands
         // Example:
-        // 1. User enters "login" command
+        // 1. User enters "login" Command
         provideInput("user123\npassword123\n");
         Main.main(null);
 
-        //capture the console output
+        //capture the Console output
         String loginOutput = outContent.toString().trim();
 
-        // perform the assertions based on expected output or system state
+        // Perform the assertions based on expected output or system state
 //        assertTrue(loginOutput.contains("Welcome, user123!"));
 
         //reset System.out to the original output stream

@@ -19,7 +19,7 @@ public class BookSoldIntegrationTest {
 
     @BeforeEach
     public void setUp() {
-        // Clean up the test file before each test
+        // Clean up the test file before each Test
         if (testFile.exists()) {
             assertTrue(testFile.delete());
         }
@@ -27,7 +27,7 @@ public class BookSoldIntegrationTest {
 
     @AfterEach
     public void tearDown() {
-        // Clean up the test file after each test
+        // Clean up the test file after each Test
         if (testFile.exists()) {
             assertTrue(testFile.delete());
         }
@@ -37,7 +37,7 @@ public class BookSoldIntegrationTest {
     public void testBookSoldIntegration() {
 
 
-        // Create a Book and a BookSold instance
+        // Create a Book and a Book sold instance
         Author author = new Author("John", "Doe");
         Book book = new Book("9876543210", "Test Book Sold", 80.0f, 120.0f, author, 15, Category.Fantasy, "Supplier");
         BookSold bookSold = new BookSold(book, 5);
