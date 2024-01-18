@@ -39,10 +39,10 @@ public class BookstoreSystemTest {
         provideInput("user123\npassword123\n");
         Main.main(null);
 
-        //capture the Console output
+        //capture the console output
         String loginOutput = outContent.toString().trim();
 
-        // Perform the assertions based on expected output or system state
+        // perform the assertions based on expected output or system state
 //        assertTrue(loginOutput.contains("Welcome, user123!"));
 
         //reset System.out to the original output stream
@@ -50,29 +50,29 @@ public class BookstoreSystemTest {
         outContent.reset();
 
         // Example:
-        // 2. User enters "search" command with a search query
+        // 2. user enters "search" command with a search query
         provideInput("search\nTitle1\n");
         Main.main(null);
 
-        // Capture the console output
+        // Capture the Console output
         String searchOutput = outContent.toString().trim();
 
         // Perform assertions based on expected output or system state
         assertTrue(searchOutput.contains("Search results for 'Title1'"));
 
-        // Reset System.out to the original output stream
+        // Reset System.out to the original output Stream
         System.setOut(originalOut);
         outContent.reset();
 
         // Example:
-        // 3. User enters "purchase" command for a book
+        // 3. User enters "purchase" command for a Book
         provideInput("purchase\n1\n5\n");
         Main.main(null);
 
         // Capture the console output
         String purchaseOutput = outContent.toString().trim();
 
-        // Perform assertions based on expected output or system state
+        // Perform assertions based on expected output or sytem state
         assertTrue(purchaseOutput.contains("Purchase successful"));
 
         // Reset System.out to the original output stream

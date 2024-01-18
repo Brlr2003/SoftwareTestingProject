@@ -116,6 +116,7 @@ class TestBook {
 		Book book = new Book(isbn, title, purchasedPrice, sellingPrice, author, stock,
 			category, supplier);
 		assertTrue(book.isValid());
+
 	}
 	
 	
