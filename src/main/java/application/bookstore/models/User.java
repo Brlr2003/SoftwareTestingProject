@@ -131,9 +131,7 @@ public class User extends BaseModel implements Serializable {
 
     @Override
     public boolean isValid() {
-    	 if (username.matches("\\w+")==false || password.matches("\\w+")==false)
-             return false;
-         return true;
+        return username.matches("\\w+") && password.matches("\\w+");
     }
 
     @Override
@@ -152,8 +150,7 @@ public class User extends BaseModel implements Serializable {
     public static<User extends BaseModel> void overwriteCurrentListToFile(File DATA_FILE, ArrayList<User> users) throws IOException {
         FileOutputStream fileOutputStream = new FileOutputStream(DATA_FILE, false);
         ObjectOutputStream outputStream = new ObjectOutputStream(fileOutputStream);
-        if (users.size() == 0) {
-        } else {
+        if (!users.isEmpty()) {
             for (User user : users)
                 outputStream.writeObject(user);
         }

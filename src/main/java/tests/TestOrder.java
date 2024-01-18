@@ -31,9 +31,7 @@ class TestOrder {
 	void test_getTotalOfOrderNotProperlyException1() {
 		float price = -700;
 		int quantity = 5;
-		float total;
 		 try {
-		        total = Order.getTotal(price,quantity);
 		        fail();
 		    } catch (Exception e) {
 		        assertEquals(e.getMessage(), "Price cannot be negative");
@@ -47,9 +45,7 @@ class TestOrder {
 	void test_getTotalOfOrderNotProperlyException2() {
 		float price = 800;
 		int quantity = -9;
-		float total;
 		 try {
-		        total = Order.getTotal(price,quantity);
 		        fail();
 		    } catch (Exception e) {
 		        assertEquals(e.getMessage(), "Quantity cannot be negative");

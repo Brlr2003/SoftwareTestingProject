@@ -86,30 +86,31 @@ public  class Order extends BaseModel implements Serializable {
         sum+= quantity * price;
         return sum;
     }
-    
-    
-    public void print(){
-    	PrintWriter writer=null;
-			try {
-				writer = new PrintWriter(new File("bills/" + orderID+".txt"));
-			} catch (FileNotFoundException e1) {
-				// TODO Auto-generated catch block
-				e1.printStackTrace();
-			}
-        	 
-        			String isbn= this.getIsbn();
-               		String clientName =this.getClientName();
-                    float price = this.getPrice();
-                    int quantity = this.getQuantity();
-                    float total =  price * quantity;
-                    writer.print("Order: "+orderID+"\nDate: "+date+"\nClient: "+clientName+"\nBooks Ordered: \n" + quantity + "ISBN: "+isbn+"\n Price" + price +
-                    		"\n***************\nTotal: " + total);
-             
-        	 writer.close();
-        	 System.out.println("/n New Bill Printed /n");
-        	 System.out.println("bills/" + orderID+".txt");
-        	 System.out.println(this.toString());
+
+    public void print() {
+        try (PrintWriter writer = new PrintWriter(new File("bills/" + orderID + ".txt"))) {
+            if (writer != null) {
+                String isbn = this.getIsbn();
+                String clientName = this.getClientName();
+                float price = this.getPrice();
+                int quantity = this.getQuantity();
+                float total = price * quantity;
+                writer.print("Order: " + orderID + "\nDate: " + date + "\nClient: " + clientName + "\nBooks Ordered: \n" + quantity + "ISBN: " + isbn +
+                        "\n Price" + price + "\n***************\nTotal: " + total);
+            } else {
+                System.err.println("Failed to create PrintWriter.");
+            }
+        } catch (FileNotFoundException e1) {
+            e1.printStackTrace();
+        }
+        System.out.println("\nNew Bill Printed\n");
+        System.out.println("bills/" + orderID + ".txt");
+        System.out.println(this.toString());
     }
+
+
+
+
 
 
     public String getClientName() {
