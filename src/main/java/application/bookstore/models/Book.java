@@ -114,10 +114,9 @@ public class Book extends BaseModel  implements Serializable{
 
     @Override
     public boolean saveInFile() {
-        boolean saved = super.save(DATA_FILE);
-        if (saved)
-            books.add(this);
-        return saved;
+        super.save(DATA_FILE);
+        books.add(this);
+        return true;
     }
 
     public boolean isValid() {
