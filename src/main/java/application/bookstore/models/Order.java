@@ -1,7 +1,6 @@
 package application.bookstore.models;
 
 import application.bookstore.auxiliaries.FileHandler;
-import application.bookstore.views.OrderView;
 
 import java.io.*;
 import java.time.LocalDateTime;
@@ -14,24 +13,17 @@ public  class Order extends BaseModel implements Serializable {
     private static final long serialVersionUID = 1234567L;
     private String isbn;
     private String clientName;
-    private String username;
     private String orderID;
     private int quantity;
-    private Book bookSold;
     private String date;
     private float price;
     private float total;
-    private int noOfTypes;
-
     private static final ArrayList<Order> orders = new ArrayList<>();
     public static final String FILE_PATH = "data/orders.ser";
     public static final File DATA_FILE = new File(FILE_PATH);
 
     private static final DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
     private static final DateTimeFormatter idFormatter = DateTimeFormatter.ofPattern("yyyy_MM_dd_HH_mm_ss");
-
-
-    
 
 
 	public Order(String isbn, String clientName, int quantity, float price, float total) {
@@ -45,28 +37,8 @@ public  class Order extends BaseModel implements Serializable {
 	     setDate(dtf.format(now));
 	     setOrderID("Order_"+idFormatter.format(now));
 	}
-
-
-    
-    
-    public int getNoOfTypes() {
-		return noOfTypes;
-	}
-
-
-
-	public void setNoOfTypes(int noOfTypes) {
-		this.noOfTypes = noOfTypes;
-	}
-
-
-
 	public String getIsbn() {
 		return isbn;
-	}
-
-	public void setIsbn(String isbn) {
-		this.isbn = isbn;
 	}
 
 	public int getQuantity() {
@@ -75,14 +47,6 @@ public  class Order extends BaseModel implements Serializable {
 
 	public void setQuantity(int quantity) {
 		this.quantity = quantity;
-	}
-
-	public Book getBookSold() {
-		return bookSold;
-	}
-
-	public void setBookSold(Book bookSold) {
-		this.bookSold = bookSold;
 	}
 
 	public static ArrayList<Order> getSearchResults(String searchText) {
@@ -156,26 +120,8 @@ public  class Order extends BaseModel implements Serializable {
         this.clientName = clientName;
     }
 
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    public String getOrderID() {
-        return orderID;
-    }
-
     public void setOrderID(String orderID) {
         this.orderID = orderID;
-    }
-
-
-
-    public String getDate() {
-        return date;
     }
 
     public void setDate(String date) {
@@ -249,10 +195,6 @@ public  class Order extends BaseModel implements Serializable {
 		}
 		
 		}
-    
-    
-
-
 
 	public Category getIsbnCategory() {//to find the category of the corresponding isbn book
 		for(Book b: Book.getBooks()) {
@@ -262,10 +204,7 @@ public  class Order extends BaseModel implements Serializable {
 			}
 			return null;	
 		}
-	
-	
-	
-	
+
 	public int getIsbnStock() {//to find the stock of the corresponding isbn book
 		for(Book b: Book.getBooks()) {
 			if (b.getIsbn().equals(this.isbn)) {
