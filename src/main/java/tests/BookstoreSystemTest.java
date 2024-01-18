@@ -39,13 +39,13 @@ public class BookstoreSystemTest {
         provideInput("user123\npassword123\n");
         Main.main(null);
 
-        // Capture the console output
+        //Capture the Console output
         String loginOutput = outContent.toString().trim();
 
         // Perform assertions based on expected output or system state
 //        assertTrue(loginOutput.contains("Welcome, user123!"));
 
-        // Reset System.out to the original output stream
+        //reset System.out to the original output stream
         System.setOut(originalOut);
         outContent.reset();
 
