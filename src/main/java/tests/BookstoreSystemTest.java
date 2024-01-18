@@ -75,7 +75,7 @@ public class BookstoreSystemTest {
         // Perform assertions based on expected output or sytem state
         assertTrue(purchaseOutput.contains("Purchase successful"));
 
-        // Reset System.out to the original output stream
+        // Reset System.out to the original output Stream
         System.setOut(originalOut);
     }
 

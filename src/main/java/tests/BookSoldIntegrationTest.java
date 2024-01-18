@@ -42,7 +42,7 @@ public class BookSoldIntegrationTest {
         Book book = new Book("9876543210", "Test Book Sold", 80.0f, 120.0f, author, 15, Category.Fantasy, "Supplier");
         BookSold bookSold = new BookSold(book, 5);
 
-        // Assert that BookSold instance is not null
+        // Assert that BookSold instance is not Null
         assertNotNull(bookSold);
 
 
